@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Ease</title>
+    <style>
+        /* CSS for styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://images.unsplash.com/photo-1520605363242-1012f0ae0c15?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1925&q=80'); /* Replace 'your-background-image-url.jpg' with the actual URL of your background image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #69118c;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        .container {
+            max-width: 800px;
+            padding: 20px;
+            background-color: rgba(157, 152, 157, 0.9); /* Added a semi-transparent background */
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meal Ease</h1>
+    </header>
+    <div class="container">
+        <h2>Choose Your Meal Preference</h2>
+        <form id="mealPreferenceForm">
+            <label>
+                <input type="radio" name="meal_preference" value="vegan"> Vegan
+            </label>
+            <label>
+                <input type="radio" name="meal_preference" value="vegetarian"> Vegetarian
+            </label>
+            <label>
+                <input type="radio" name="meal_preference" value="non-vegetarian"> Non-Vegetarian
+            </label>
+            
+            <div class="button-group">
+                <button type="button" onclick="submitForm()">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function submitForm() {
+            const form = document.getElementById("mealPreferenceForm");
+            const selectedPreference = form.querySelector('input[name="meal_preference"]:checked');
+            
+            if (selectedPreference) {
+                const preferenceValue = selectedPreference.value;
+                // Check the user's selection and redirect accordingly
+                switch (preferenceValue) {
+                    case "vegan":
+                        // Redirect to a vegan articles page
+                        window.location.href = "https://www.loveandlemons.com/vegan-recipes/";
+                        break;
+                    case "vegetarian":
+                        // Redirect to a vegetarian articles page
+                        window.location.href = "https://www.realsimple.com/food-recipes/recipe-collections-favorites/healthy-meals/vegetarian-recipes";
+                        break;
+                    case "non-vegetarian":
+                        // Redirect to a non-vegetarian articles page
+                        window.location.href = "https://www.indianhealthyrecipes.com/recipes/non-veg/";
+                        break;
+                    default:
+                        // Handle any other cases or errors here
+                        break;
+                }
+            } else {
+                // Handle the case where no preference is selected
+                alert("Please select a meal preference.");
+            }
+        }
+    </script>
+</body>
+</html>

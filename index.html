@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to MEAL EASE</title>
+    <style>
+        /* Add your styles for the background image, fonts, and text colors here */
+        body {
+            background-image: url(https://www.photojaanic.com/blog/wp-content/uploads/sites/2/2017/07/food-photography-tips-photojaanic-3-1.jpg); /* Replace with the path to your desired background image */
+            background-size: 100% auto; /* Auto width and full height for landscape mode */
+            background-position: center;
+            font-family: 'Verdana', sans-serif; /* Replace 'Verdana' with your desired font */
+            color: white; /* Set font color to white */
+            text-align: center;
+            padding: 0;
+            margin: 0; /* Remove default margin */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative; /* Make the body a relative position for absolute positioning of text background */
+        }
+
+        /* Semi-transparent background for text */
+        .text-background {
+            background-color: rgba(0, 0, 0, 0.6); /* Adjust the alpha value (0.6) for the desired opacity */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #f0eeed; /* Header text color */
+            font-family: 'Arial', sans-serif; /* Replace 'Arial' with your desired header font */
+        }
+
+        p {
+            font-size: 24px;
+            color: #faf8f7; /* Paragraph text color */
+            font-family: 'Tahoma', sans-serif; /* Replace 'Tahoma' with your desired paragraph font */
+        }
+
+        #explore-button {
+            background-color: #3c16bb; /* Customize the button's background color */
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        #explore-button:hover {
+            background-color: #2a0d4c; /* Customize the button's background color on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="text-background">
+        <h1>Welcome to MEAL EASE</h1>
+        <p>FROM KITCHEN TO TABLE IN A BREEZE</p>
+        <button id="explore-button" onclick="window.location.href = 'dashBoard.html';">EXPLORE</button>
+    </div>
+</body>
+</html>
